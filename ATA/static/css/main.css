@@ -78,3 +78,62 @@ td {
  .th2 {
      width: 714px;
  }
+
+
+.rowhead {
+    background-color: #CAE7FA;
+    color: #325687;
+}
+
+.rowawal {
+    color: #333333;
+    background-color: #CAE7FA;
+}
+
+.background {
+    z-index: 0;
+}
+
+.body {
+    z-index: 99;
+}
+
+.judulartikel a,
+.headlineatas a  {
+    text-decoration: none;
+    color: #333333;
+}
+
+.judulartikel {
+    padding-left: 10px;
+}
+
+.judulartikel a:hover,
+.headlineatas a:hover {
+    color: blue;
+}
+
+.borderhome {
+    border: 1px solid yellow;
+    padding-left: 0;
+}
+
+
+
+
+/* artikel_detail */
+
+.border1 {
+    border-left: 1px solid red;
+    border-right: 1px solid grey;
+}
+
+.border2 {
+    border-bottom: 1px solid grey;
+}
+
+.border3 {
+    border-top: 1px solid grey;
+    margin-top: 10px;
+    padding-top: 10px;
+}
