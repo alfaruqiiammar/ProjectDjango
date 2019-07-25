@@ -6,4 +6,6 @@ from .models import Artikel
 class ArtikelFilter(django_filters.FilterSet):
     class Meta:
         model = Artikel
-        fields = ['kategori']
+        fields = {
+            'kategori': ['exact'],
+        }

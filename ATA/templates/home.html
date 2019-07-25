@@ -1,4 +1,7 @@
-{% load static %}
+{%  extends 'base/base.html'  %}
+{%  load static  %}
+
+{% block content  %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +20,7 @@
                     <a href="{% url 'home' %}"><h5>Home</h5></a>
                 </div>
                 <div class="col-md-1 text-center border border-grey">
-                    <h5>Pidato</h5>
-                </div>
-                <div class="col-md-1 border border-grey">
-                    <h5>Menulis</h5>
+                    <a href="{% url 'artikel_kategori' %}"><h5>Kategori</h5></a> 
                 </div>
                 <div class="col-md-9 text-right border border-grey">
                     <h5>Search</h5>
@@ -80,3 +80,5 @@
     </div>
 </body>
 </html>
+
+{%  endblock %}

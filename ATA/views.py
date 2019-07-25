@@ -24,4 +24,3 @@ def order3(request):
 def artikel_kategori(request):
     f = ArtikelFilter(request.GET, queryset=Artikel.objects.all())
     return render(request, 'artikel_kategori.html', {'filter': f})
->>>>>>> home
