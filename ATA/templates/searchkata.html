@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block judul %}
+{% endblock %}
+
+{% block content %}
+<body>
+        <form method="GET" style="padding-top: 180px;">
+                <input type="text" name="cari">
+                <button type="submit">search</button>
+            </form>
+    <p>{{ kata }} ini yang dicari</p>
+    <p>artinya adalah {{ arti.arti }}</p>
+    <p>related to {{ arti.related }}</p>
+    <p>sinonim to {{ arti.sinonim }}</p>
+</body>
+{% endblock %}

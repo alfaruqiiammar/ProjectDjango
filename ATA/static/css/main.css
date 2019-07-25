@@ -4,13 +4,29 @@ body {
 
 
 
-.isi_header, .isi_footer {
+.isi_header {
     border: solid white 5px;
     background-color: #b1daf6;
-    margin-bottom: 10px;
 }
 
 .isi_footer {
+    border: solid white 5px;
+    background-color: #b1daf6;
+    margin-bottom: 10px;
     padding-top: 10px;
-    margin-top: 10px;
+}
+
+
+/* bagian search  */
+
+input {
+    width: 350px;
+    font-size: 40px;
+}
+button {
+    font-size: 40px;
+    border-radius: 10px;
+    height: 72px;
+    background-color: #7eafd7;
+    color: white;
 }
