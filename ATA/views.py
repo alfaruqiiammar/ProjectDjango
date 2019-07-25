@@ -13,6 +13,8 @@ def search(request):
             return render(request, 'searchkata.html', {'kata':ini,'arti': arti})
     return render(request,'search.html')
 
+def coba(request):
+    return render(request,'coba.html')
 # def searchkata(request, kata):
 #     if request.method == 'GET':
 #         ini = request.GET.get('cari')
