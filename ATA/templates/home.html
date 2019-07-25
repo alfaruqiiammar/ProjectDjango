@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" >
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+            <div class="row rowhead">
+                <div class="col-md-1 text-center border border-grey">
+                    <a href="{% url 'home' %}"><h5>Home</h5></a>
+                </div>
+                <div class="col-md-1 text-center border border-grey">
+                    <h5>Pidato</h5>
+                </div>
+                <div class="col-md-1 border border-grey">
+                    <h5>Menulis</h5>
+                </div>
+                <div class="col-md-9 text-right border border-grey">
+                    <h5>Search</h5>
+                </div>
+            </div>
+    </div>
+    <div class="container-fluid background">
+        <div class="container-fluid body">
+        <br><br>
+        <div class="container">
+            <div class="row justify-content-center borderhome">
+                <div class="col-md-8 rowawal text-center border border-grey">
+                    <h2>Tutorial Bahasa Inggris</h2>
+                    <br>
+                </div>
+                <div class="col-md-8 headlineatas text-center border border-grey">
+                    <a href="{% url 'artikel_detail' 1 %}"><img src="https://squline.com/wp-content/uploads/2016/12/Pentingnya-Belajar-Bahasa-Inggris.jpg" width=100% alt=""></a>
+                    <br><br>
+                    <a href="{% url 'artikel_detail' 1 %}"><h3>15 Alasan Pentingnya Belajar Bahasa Inggris, Nomor 8 Mengejtukan!</h3></a>
+                    <br>
+                </div>
+                <div class="col-md-8 rowawal text-center border border-grey">
+                    <h3>Terbaru</h3>
+                    <br>
+                </div>
+                <div class="col-md-8 text-center border border-grey">
+                    {%  for artikel in artikels  %}
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center border border-grey">
+                            <a href="{% url 'artikel_detail' artikel.id %}"><img src="{{  artikel.foto  }}" width="200px" alt=""></a>
+                        </div>
+                        <div class="col-md-8 judulartikel text-left">
+                            <a href="{% url 'artikel_detail' artikel.id %}"><h3>{{  artikel.judul  }}</h3></a>
+                        </div>
+                    </div>
+                    {%  endfor  %}
+                </div>
+
+         
+                <div class="col-md-8 text-left border border-grey">
+                    <br>
+                    <h4>Welcome to sukasuka.com</h4>
+                    <br>
+                    <p>Sukasuka.com is an Online Indonesian English Dictionary. In Indonesian, it means: Kamus Indonesia Inggris. This services is provided to you for free.</p>
+                    <br>
+                </div>
+                <div class="col-md-8 text-left border border-grey">
+                    <br>
+                    <h4>What is kamus?</h4>
+                    <br>
+                    <p>"Kamus adalah sejenis buku rujukan yang menerangkan makna kata-kata. Ia berfungsi untuk membantu seseorang mengenal perkataan baru</p>
+                    <p>menerangkan maksud kata, kamus juga mungkin mempunyai pedoman sebutan, asal-usul (etimologi) sesuatu perkataan dan juga contoh pengunaan bagi sesuatu berkataan. Untuk memperjelas kadang kala terdapat juga ilustrasi di dalam kamus." <a href="https://www.wikipedia.org/">Wikipedia</a></p>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
